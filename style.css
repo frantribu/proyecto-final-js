@@ -1,0 +1,82 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*Estilos del header*/
+
+header menu{
+  background-color: rgb(49, 49, 49);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem;
+}
+
+header menu button{
+  background:none;
+  border: none;
+}
+
+#cerrar-menu{
+  background: none;
+  border: none;
+  padding: 0.9rem;
+}
+
+a img{
+  width: 110px;
+  height: 28px;
+  margin: 0 0 0 1rem;
+}
+
+
+/*Footer - Estilo de el pie de la pagina*/
+
+footer{
+  width: 100vw;
+  height: 23vh;
+  background-color: rgb(49, 49, 49);
+  color: white;
+}
+
+footer section h4{
+  font-size:0.9rem;
+  padding: 0.8rem 1rem;
+}
+
+footer section p{
+  margin: -0.4rem 0 0 0;
+  padding: 0 0 0 1rem;
+}
+
+footer section form{
+  padding: 0 0 0 1rem;
+}
+
+footer section form input{
+  margin: 0.4rem 0 0 0 ;
+  padding: 0.4rem 3rem 0.4rem 0.2rem;
+}
+
+form button{
+  background-color: red;
+  border: none;
+}
+
+
+

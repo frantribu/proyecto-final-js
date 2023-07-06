@@ -94,21 +94,3 @@ formularioLogin.addEventListener("submit", async (e) =>{
         localStorage.setItem("datos-del-usuario", JSON.stringify(usuarioEsAceptado))
     }
 })}
-
-//mandar email para enterarte de las promos
-let usuarioIngresado = { email: ""}
-
-formularioPromos.addEventListener("submit", (e) =>{
-    e.preventDefault()
-
-    usuarioIngresado = {
-        ...usuarioIngresado,
-        email:emailComplete.value
-    }
-
-    if(!usuarioIngresado.email){
-        alert("Falta completar datos!")
-    }else{
-        alert("Gracias!. Te avisaremos de todas nuestras promos")
-    }
-})

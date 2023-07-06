@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tecnopolis</title>
-    <link rel="stylesheet" href="css/productos-general.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/productos-general.css">
+    <link rel="stylesheet" href="css/registrarse-inicio.css">
 </head>
-    <body>
-        <nav id="nav">
+<body>
+ <nav id="nav">
           <!--Las diferentes vistas-->
           <section>
-            <!--Boton para cerrar el menu-->
+          <!--Boton para cerrar el menu-->
             <button id="cerrar-menu">
               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -45,10 +46,10 @@
                 <path d="M4 12l16 0" />
                 <path d="M4 18l16 0" />
               </svg>
-            <!--Logo de la pagina-->
               <a href="index.html"><img src="img/logo-tecno.png" alt=""></a>
     
             </button>
+            <!--Logo de la pagina-->
             <!--Boton del carrito-->
             <button>
             <svg width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -58,10 +59,23 @@
               <path d="M17 17h-11v-14h-2" />
               <path d="M6 5l14 1l-1 7h-13" />
             </svg>
-          </button>
-          </menu>
-        </header>
-        
-        <script type="module" src="/main.js"></script>
-     </body>
-     </html>
+         </button>
+      </menu>
+    </header>
+    <br>
+    <section>
+    <br>
+    <form id="formulario-register" class="formulario">
+      <h2>Registrarse</h2>
+        <input type="text" id="fullname-input" placeholder="Nombre completo">
+        <input type="text" id="username-input" placeholder="Nombre de usuario">
+        <input type="email" id="email-input" placeholder="Correo electronico">
+        <input type="password" id="password-input" placeholder="Contraseña">
+
+        <div>¿Ya tienes una cuenta?<a href="iniciar-sesion.html" class="cuenta-ya-creada"> Inicia sesion</a></div>
+        <input type="submit" class="button" value="Registrarse">
+    </form>
+    </section>
+    <script type="module" src="main.js"></script>
+</body>
+</html>

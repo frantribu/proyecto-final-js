@@ -1,19 +1,26 @@
 import './style.css'
 
+//elementos del menu
 const burger = document.getElementById("abrir-menu")
 const nav=document.getElementById("nav")
 const cerrarmenu=document.getElementById("cerrar-menu")
 
+
+//elementos para registrarse
 const formularioRegister = document.getElementById("formulario-register")
 const nameInput= document.getElementById("fullname-input")
 const usernameInput=document.getElementById("username-input")
 const emailInput=document.getElementById("email-input")
 const passwordInput = document.getElementById("password-input")
 
+//elementos para iniciar sesion
 const formularioLogin=document.getElementById("formulario-login")
 const inputIdentificador=document.getElementById("identificador-login-input")
 const inputPassword=document.getElementById("contraseña-login-input")
 
+//elementos para enterarte de las promos
+const formularioPromos=document.getElementById("formulario-promos")
+const emailComplete=document.getElementById("complete-email")
 
 //MENU BURGER
 burger.addEventListener("click", () => {
@@ -39,6 +46,7 @@ async function subirDatos(usuario){
     return datos
 }
 
+//Iniciar sesion
 async function iniciarSesion(identifier, password){
     const res=await fetch("http://localhost:3000/iniciar-sesion",{
     method: "POST",
@@ -77,8 +85,8 @@ formularioLogin.addEventListener("submit", async (e) =>{
 
     const usuarioEsAceptado = await iniciarSesion(inputIdentificador.value, inputPassword.value)
 
-    if(usuarioEsAceptado.messaje){
-        alert(usuarioEsAceptado.messaje)
+    if(usuarioEsAceptado.message){
+        alert(usuarioEsAceptado.message)
     }
 
     if(usuarioEsAceptado.username){
@@ -86,3 +94,21 @@ formularioLogin.addEventListener("submit", async (e) =>{
         localStorage.setItem("datos-del-usuario", JSON.stringify(usuarioEsAceptado))
     }
 })}
+
+//mandar email para enterarte de las promos
+let usuarioIngresado = { email: ""}
+
+formularioPromos.addEventListener("submit", (e) =>{
+    e.preventDefault()
+
+    usuarioIngresado = {
+        ...usuarioIngresado,
+        email:emailComplete.value
+    }
+
+    if(!usuarioIngresado.email){
+        alert("Falta completar datos!")
+    }else{
+        alert("Gracias!. Te avisaremos de todas nuestras promos")
+    }
+})

@@ -68,14 +68,20 @@ footer section form{
   padding: 0 0 0 1rem;
 }
 
-footer section form input{
+form input{
   margin: 0.4rem 0 0 0 ;
   padding: 0.4rem 3rem 0.4rem 0.2rem;
+  outline: none;
+  border: none;
 }
 
 form button{
   background-color: red;
   border: none;
+  padding: 4.7px;
+  position: relative;
+  top: -2.1px;
+  left: -5px;
 }
 
 

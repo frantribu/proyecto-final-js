@@ -77,8 +77,8 @@ formularioLogin.addEventListener("submit", async (e) =>{
 
     const usuarioEsAceptado = await iniciarSesion(inputIdentificador.value, inputPassword.value)
 
-    if(usuarioEsAceptado.messaje){
-        alert(usuarioEsAceptado.messaje)
+    if(usuarioEsAceptado.message){
+        alert(usuarioEsAceptado.message)
     }
 
     if(usuarioEsAceptado.username){

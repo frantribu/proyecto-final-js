@@ -101,6 +101,7 @@ let usuarioIngresado = { email: ""}
 formularioPromos.addEventListener("submit", (e) =>{
     e.preventDefault()
 
+    
     usuarioIngresado = {
         ...usuarioIngresado,
         email:emailComplete.value
@@ -109,6 +110,10 @@ formularioPromos.addEventListener("submit", (e) =>{
     if(!usuarioIngresado.email){
         alert("Falta completar datos!")
     }else{
-        alert("Gracias!. Te avisaremos de todas nuestras promos")
+        alert("Gracias!. Te avisaremos de todas nuestras promos.")
+        emailComplete.value = "";
     }
 })
+
+
+

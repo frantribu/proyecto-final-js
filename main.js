@@ -115,5 +115,3 @@ formularioPromos.addEventListener("submit", (e) =>{
     }
 })
 
-
-

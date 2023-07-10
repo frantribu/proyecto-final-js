@@ -33,6 +33,7 @@ cerrarmenu.addEventListener("click", () => {
 
 //REGISTRARSE
 //async porq va a esperar la respuesta de q nosotros llamemos al servidor para enviar los datos
+//va a recibir un objeto q es el usuario
 async function subirDatos(usuario){
     const res= await fetch("http://localhost:3000/registrar",{
     method: "POST",
@@ -41,6 +42,7 @@ async function subirDatos(usuario){
     },
     body: JSON.stringify(usuario)
     })
+    //para leer los datos
     const datos = await res.json()
 
     return datos
@@ -53,6 +55,7 @@ async function iniciarSesion(identifier, password){
     headers: {
     "Content-Type": "application/json"
     },
+    //vamos a guardar el identificador y la contra
     body: JSON.stringify({identifier, password}) 
     })
 
@@ -72,8 +75,9 @@ formularioRegister.addEventListener("submit", async (e) =>{
         password:passwordInput.value
     }
 
-    const usuarioRegistrado = await subirDatos(usuario)
+    const usuarioRegistrado= await subirDatos(usuario)
     
+    //si usuario registrado tiene un valor se va a mostrar por consola
     if(usuarioRegistrado) {
         console.log(usuarioRegistrado)
     }
@@ -91,6 +95,9 @@ formularioLogin.addEventListener("submit", async (e) =>{
 
     if(usuarioEsAceptado.username){
         alert("Sesion iniciada con exito!")
+        inputIdentificador.value="";
+        inputPassword.value="";
+        //en el localstorage vamos a guardar un item en este caso datos-del-usuario q va a ser la conversion a json en usuarioEsAceptado
         localStorage.setItem("datos-del-usuario", JSON.stringify(usuarioEsAceptado))
     }
 })}

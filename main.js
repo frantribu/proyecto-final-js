@@ -82,6 +82,8 @@ formularioRegister.addEventListener("submit", async (e) =>{
         console.log(usuarioRegistrado)
         alert("Usuario regisrado con exito!")
     }
+    window.location.href = "http://localhost:5173/iniciar-sesion.html"
+
 })}
 
 if(formularioLogin){

@@ -80,6 +80,7 @@ formularioRegister.addEventListener("submit", async (e) =>{
     //si usuario registrado tiene un valor se va a mostrar por consola
     if(usuarioRegistrado) {
         console.log(usuarioRegistrado)
+        alert("Usuario regisrado con exito!")
     }
 })}
 
@@ -99,6 +100,8 @@ formularioLogin.addEventListener("submit", async (e) =>{
         inputPassword.value="";
         //en el localstorage vamos a guardar un item en este caso datos-del-usuario q va a ser la conversion a json en usuarioEsAceptado
         localStorage.setItem("datos-del-usuario", JSON.stringify(usuarioEsAceptado))
+        window.location.href = "http://localhost:5173/index.html"
+
     }
 })}
 
@@ -120,5 +123,6 @@ formularioPromos.addEventListener("submit", (e) =>{
         alert("Gracias!. Te avisaremos de todas nuestras promos.")
         emailComplete.value = "";
     }
+
 })
 
